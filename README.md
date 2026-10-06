@@ -76,9 +76,9 @@ CUDA_VISIBLE_DEVICES=0 python -u run_experiments.py \
 | Argument | Default | Meaning |
 | --- | --- | --- |
 | `--gamma` | `4` | Maximum draft length |
-| `--use-tree` / `--use_tree` | `true` | Tree verification; `false` generates a chain of draft |
+| `--use_tree` | `true` | Tree verification; `false` generates a chain of draft |
 | `--beta` | `0.3` | SP2EC exploration parameter |
-| `--ucb-l` / `--ucb_l` | `10` | UCBSpec exploration parameter L |
+| `--ucb_l` | `10` | UCBSpec exploration parameter L |
 
 For example: `--gamma 5 --use_tree false --beta 0.2 --ucb_l 10`.
 

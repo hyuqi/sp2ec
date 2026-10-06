@@ -1,6 +1,6 @@
 # SP$^2$EC : Adaptive Self-Speculative Decoding for Vision-Language Models
 
-Implementation of the paper SP$^2$EC : Adaptive Self-Speculative Decoding for Vision-Language Models.
+Official implementation of the paper SP$^2$EC : Adaptive Self-Speculative Decoding for Vision-Language Models.
 
 This repository implements cosSim and KnapSpec layer skipping with UCBSpec and
 SP2EC selection for vision-language models.

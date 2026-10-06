@@ -33,15 +33,14 @@ conda install -c conda-forge ffmpeg -y
 Set `--data-root` or `DATA_ROOT` to the parent dataset directory (default:
 `./datasets`). Use `--data-path` to override an individual dataset's location.
 
-| `--dataset` | Directory under the data root | Required data / source |
-| --- | --- | --- |
-| `videomme` | `Video-MME` | Extracted videos; annotations from [Video-MME](https://huggingface.co/datasets/lmms-eval/Video-MME) |
-| `mmbench` | `MMBench-Video` | `MMBench-Video.tsv` and [restored video files](https://huggingface.co/datasets/opencompass/MMBench-Video#how-to-get-video-data) |
-| `arkitscenes` | `VSI-Bench-ARKitScenes` | `test.jsonl` and extracted `arkitscenes.zip` videos from [VSI-Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench) |
-| `aime25` | `AIME2025` | `aime2025-I.jsonl` and `aime2025-II.jsonl` from [AIME2025](https://huggingface.co/datasets/opencompass/AIME2025) |
+| `--dataset` | Required data / source |
+| --- | --- |
+| `videomme` | Extracted videos; annotations from [Video-MME](https://huggingface.co/datasets/lmms-eval/Video-MME) |
+| `mmbench` | `MMBench-Video.tsv` and [restored video files](https://huggingface.co/datasets/opencompass/MMBench-Video#how-to-get-video-data) |
+| `arkitscenes` | `test.jsonl` and extracted `arkitscenes.zip` videos from [VSI-Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench) |
+| `aime25` | `aime2025-I.jsonl` and `aime2025-II.jsonl` from [AIME2025](https://huggingface.co/datasets/opencompass/AIME2025) |
 
-
-Adjust `--num-prompts` and `--start-idx` to select another slice.
+Adjust `--num-prompts` and `--start-idx` to select number of prompts.
 
 
 
@@ -58,7 +57,7 @@ DATA_ROOT=/path/to/datasets \
 bash run_sample_mmbench_qwen2_5_vl_7b.sh
 ```
 
-To choose a model, dataset, or method group directly:
+To run comparison with other model, dataset, or method:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -u run_experiments.py \
@@ -82,7 +81,9 @@ CUDA_VISIBLE_DEVICES=0 python -u run_experiments.py \
 | `--ucb-l` / `--ucb_l` | `10` | UCBSpec exploration parameter L |
 
 For example: `--gamma 5 --use_tree false --beta 0.2 --ucb_l 10`.
+
 Use `--output-dir` to change the results location and `--help` for all options.
+
 Remark: Tree size and whether tree decoding is enabled can have a considerable, device-dependent impact:
 a larger tree offers more candidate paths but also increases verification work
 and memory use. A larger tree is not necessarily faster, and chain decoding may

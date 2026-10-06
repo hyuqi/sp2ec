@@ -92,8 +92,8 @@ perform better on some devices.
 
 ## Acknowledgments
 
-We thank the authors of **KnapSpec: Self-Speculative Decoding via Adaptive Layer
-Selection as a Knapsack Problem** for their work and for making their
+We thank the authors of **[KnapSpec: Self-Speculative Decoding via Adaptive Layer
+Selection as a Knapsack Problem](https://github.com/kaist-flexml-lab/knapspec)** for their work and for making their
 implementation available. This implementation builds on their codebase.
 
 Please also cite the original KnapSpec work when using this implementation:
